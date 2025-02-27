@@ -1,6 +1,7 @@
 body {
-  font-family: "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
-    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
   font-size: 16px;
   color: var(--font-default-color);
 }
@@ -58,7 +59,8 @@ h4 {
 }
 
 section > p,
-article > p {
+article > p,
+.introduction > p {
   line-height: 24px;
   text-indent: 8px;
 }
@@ -67,12 +69,14 @@ section,
 article {
   display: flex;
   flex-flow: column;
+  margin: 1rem 0;
 }
 
 div.thumbnail {
   display: flex;
   justify-content: center;
   margin-bottom: var(--page-paragraph-margin-y);
+  gap: 1rem;
 }
 
 section::after {
@@ -96,9 +100,43 @@ aside {
 aside h2 {
   font-size: 1.7rem;
 }
+img {
+  width: 250px;
+  height: 250px;
+  border-radius: 0.25rem;
+  object-fit: cover;
+}
+textarea {
+  flex: 1;
+  border: 1px solid var(--gray-border);
+  resize: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  &:focus::placeholder {
+    opacity: 0;
+  }
+}
+button {
+  border: none;
+  padding: 0.75rem 0.8rem;
+  cursor: pointer;
+  background-color: var(--gray-background);
+  border-radius: 0.25rem;
+  &:hover {
+    background-color: #dbdbdb;
+  }
+}
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  grid-template-rows: repeat(3, 250px);
+  gap: 0.25rem;
+  justify-content: center;
+  align-items: center;
+}
 
 .profile-image {
-  background-image: url("https://images.unsplash.com/photo-1618979251882-0b40ef3617f0?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("../images/profile.png");
   background-size: 100%;
   background-position: center 100%;
   width: var(--aside-width);
@@ -109,18 +147,18 @@ aside h2 {
 
 aside.right-sidebar nav {
   padding: var(--right-sidebar-padding);
+  border-radius: 1rem;
 }
 
-ol.contents {
-  list-style-type: decimal;
+ul.contents {
   padding: 24px;
 }
 
-ol.contents li:not(:last-child) {
+ul.contents li:not(:last-child) {
   margin-bottom: 16px;
 }
 
-ol.contents li a {
+ul.contents li a {
   text-decoration: none;
   color: var(--font-default-color);
 }
@@ -128,9 +166,9 @@ ol.contents li a {
 footer {
   display: flex;
   flex-direction: column;
-  padding-top: var(--page-padding-top);
   align-items: center;
   margin: 24px;
+  width: 100%;
 }
 
 footer p {
@@ -138,17 +176,114 @@ footer p {
 }
 
 :root {
+  --primary: #81bfda;
+  --gray-background: #f8f9fa;
+  --gray-border: #dee2e6;
+
   --page-padding: 48px;
   --page-subtitle-margin-y: 32px;
   --page-paragraph-margin-y: 16px;
   --right-sidebar-padding: 32px;
 
   --header-width: 235px;
-  --header-bg-color: #f6f6f6;
+  --header-bg-color: #e8f9ff;
 
   --aside-width: 350px;
-  --aside-bg-color: #f6f6f6;
+  --aside-bg-color: #e8f9ff;
 
   --divider-color: #efefef;
-  --font-default-color: #333;
+  --font-default-color: #212529;
+}
+
+.introduction {
+  background-color: var(--gray-background);
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 2rem;
+}
+
+.navigator-title {
+  text-align: center;
+}
+.navigator {
+  background-color: white;
+  display: flex;
+  padding: 0.8rem 0.8rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  &:hover {
+    border-left: 10px solid var(--primary);
+    transition: 0.2s ease;
+  }
+}
+.song {
+  width: 200px;
+  height: auto;
+}
+.sns {
+  display: inline-flex;
+  gap: 1.5rem;
+  justify-content: center;
+  width: 100%;
+}
+.icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  &:hover {
+    width: 32px;
+    height: 32px;
+    transition: 0.3s ease;
+  }
+}
+.comment-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.comment-container {
+  display: flex;
+  gap: 0.5rem;
+}
+.comment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.comment-item {
+  border: 1px solid var(--gray-border);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  border-radius: 0.25rem;
+}
+.comment-content {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16.34px;
+  letter-spacing: 0%;
+}
+.comment-author {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+}
+.comment-author-profile {
+  width: 24px;
+  height: 24px;
+}
+.submit-button {
+  background-color: var(--primary);
+  color: white;
+  &:hover {
+    background-color: #5390aa;
+  }
+}
+.footer-image {
+  width: auto;
+  height: auto;
 }

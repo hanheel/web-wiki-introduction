@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>자기소개 위키 페이지</title>
+    <title>블루의 위키 페이지</title>
     <link rel="stylesheet" href="./css/main.css" />
     <script src="./js/index.js"></script>
   </head>
@@ -11,51 +11,89 @@
     <div id="app">
       <header>
         <h1 class="logo">
-          <img src="./images/header-logo.png" alt="행성이 로고" width="166" height="147" />
+          <img
+            src="./images/header-logo.png"
+            alt="행성이 로고"
+            width="166"
+            height="147"
+          />
           <span class="text">크루 위키</span>
         </h1>
       </header>
       <main>
-        <h2 class="title">크론</h2>
+        <h2 class="title">블루</h2>
         <hr />
-        <section>
-          <h3 class="subtitle">자기소개</h3>
+        <div id="introduction" class="introduction">
           <p>
-            안녕하세요, 저는 끊임없이 새로운 도전을 통해 성장하는 것을 즐기는 크론이에요. 안정적인 삶에서 벗어나 세 번의
-            큰 전환점을 겪으며 지금의 제가 되었어요. 어제보다 더 나은 오늘의 나를 만들기 위해 노력하고 있죠. 매일의 작은
-            성취들이 모여 제가 한 걸음 더 성장했다는 것을 느낄 때면 가슴이 벅차오르거든요. 그러다 문득, 저처럼 변화를
-            갈망하며 도전을 꿈꾸는 분들이 많다는 것을 알게 되었어요. 나의 성장도 의미 있지만, 누군가의 성장을 함께할 수
-            있다는 건 매일 새로운 설렘을 주는 일이에요.
+            안녕하세요, 블루입니다 😀 <br />저는 평범함에 안주하지 않고, 언제나
+            창의적인 해결책을 찾아 나서는 것을 좋아해요. <br />새로운 아이디어가
+            떠오를 때마다 설렘을 느끼고, 그것이 현실로 구현될 때마다 큰 성취감을
+            경험합니다. <br />이를 통해 세상에 더 나은 가치를 더해가는 것이 제
+            목표입니다.
           </p>
+        </div>
+        <section>
+          <h3 id="gallery" class="subtitle">갤러리 🦋</h3>
+
+          <div class="gallery-container">
+            <img src="./images/파란색2.png" />
+            <img src="./images/파란색3.png" />
+            <img src="./images/파란색5.png" />
+            <img src="./images/파란색4.png" />
+            <img src="./images/파란색1.png" />
+            <img src="./images/파란색6.png" />
+            <img src="./images/파란색7.png" />
+            <img src="./images/파란색8.png" />
+            <img src="./images/파란색9.png" />
+          </div>
         </section>
 
         <section>
-          <h3 class="subtitle">나를 울린 인생 작품</h3>
+          <h3 id="recommendation" class="subtitle">추천 작품 🦋</h3>
           <article>
-            <h4>인생 영화</h4>
+            <h4>좋아하는 노래</h4>
             <div class="thumbnail">
+              <img src="./images/노래1.png" class="song" alt="노래 stormy" />
               <img
-                src="https://image.tmdb.org/t/p/w1280/u8ffl7CRAS12KA8eQEtkLuHg8Fm.jpg"
-                width="200"
-                alt="그래비티 영화 포스터"
+                src="./images/노래2.png"
+                class="song"
+                alt="노래 tik tak tok"
               />
+              <img src="./images/노래3.png" class="song" alt="노래 대양" />
             </div>
             <p>
-              알폰소 쿠아론 감독이 연출하고 샌드라 불럭이 주연으로 출연하는 영화 「그래비티」는 우주 정거장에서 임무
-              수행 중 고립된 한 우주인의 생존과 귀환을 그린 작품이다. 대학생 시절 처음 본 이 영화는 당시엔 그저 지루한
-              우주 영화였다. 그런데 이 영화를 다시 보니, 마치 내 미래를 미리 보여준 복선과도 같다는 점을 깨달았다.
+              드럼을 듣는 걸 좋아합니다. 같은 박자여도 각자만의 해석이 담기면
+              다른 결과를 내는 것이 포인트입니다.
+            </p>
+          </article>
+
+          <article>
+            <h4 class="subtitle">인생 전시 🌄</h4>
+            <div class="thumbnail">
+              <img src="./images/전시1.png" width="200" alt="전시 사진1" />
+              <img src="./images/전시2.png" width="200" alt="전시 사진2" />
+              <img src="./images/전시3.png" width="200" alt="전시 사진3" />
+            </div>
+            <p>
+              뱅크시의 작품에는 독특한 사회적 메세지가 담겨있습니다. 간단한
+              작품처럼 보이지만 깊은 의미가 담겨있어, 단순 미술을 넘어 생각을
+              자극하는 경험이 됩니다.
             </p>
           </article>
         </section>
 
-        <section>
+        <section class="comment-section">
           <div class="comment-writing-container">
             <form>
               <fieldset>
-                <legend>댓글 쓰기</legend>
-                <textarea
-                  placeholder="정말 멋진 글이네요. 크루가 감동할 수 있도록 훈훈해지는 댓글 부탁 드립니다."
-                ></textarea>
+                <h3 id="comment" class="subtitle">댓글 💬</h3>
+                <div class="comment-container">
+                  <textarea
+                    placeholder="정말 멋진 글이네요. 크루가 감동할 수 있도록 훈훈해지는 댓글 부탁 드립니다."
+                  ></textarea>
+                  <button>취소</button>
+                  <button id="submit" class="submit-button">등록</button>
+                </div>
               </fieldset>
             </form>
           </div>
@@ -63,40 +101,59 @@
             <li>
               <div class="comment-item">
                 <div class="comment-author">
-                  <img src="./images/comment-author-icon.png" alt="사용자 프로필 이미지" />
+                  <img
+                    src="./images/comment-author-icon.png"
+                    class="comment-author-profile"
+                    alt="사용자 프로필 이미지"
+                  />
                   <span>방문자</span>
                 </div>
                 <div class="comment-content">
-                  대학생 때 읽었던 모모가 문득 생각나서 다시 펼쳐봤는데, 글쓴이님 말씀처럼 정말 지금 보니까 완전 다르게
-                  다가오더라구요! 회색 신사들이 들려주는 '시간 절약'이란 말이 마치 요즘 유튜브에서 흔히 보이는 '갓생
-                  살기' 영상들 같아서 씁쓸하게 웃었습니다 ㅎㅎ 광안리 해변 이야기는 정말 이 글의 하이라이트인 것 같아요.
-                  저도 이제는 가끔은 멍때리는 시간을 가져야겠어요 :&#41;
+                  대학생 때 읽었던 모모가 문득 생각나서 다시 펼쳐봤는데,
+                  글쓴이님 말씀처럼 정말 지금 보니까 완전 다르게 다가오더라구요!
+                  회색 신사들이 들려주는 '시간 절약'이란 말이 마치 요즘
+                  유튜브에서 흔히 보이는 '갓생 살기' 영상들 같아서 씁쓸하게
+                  웃었습니다 ㅎㅎ 광안리 해변 이야기는 정말 이 글의 하이라이트인
+                  것 같아요. 저도 이제는 가끔은 멍때리는 시간을 가져야겠어요
+                  :&#41;
                 </div>
               </div>
             </li>
             <li>
               <div class="comment-item">
                 <div class="comment-author">
-                  <img src="./images/comment-author-icon.png" alt="사용자 프로필 이미지" />
+                  <img
+                    src="./images/comment-author-icon.png"
+                    class="comment-author-profile"
+                    alt="사용자 프로필 이미지"
+                  />
                   <span>방문자</span>
                 </div>
                 <div class="comment-content">
-                  와... 크론이라는 닉네임의 의미를 읽고 푸지 이발사가 딱 떠올랐어요. 저도 회사에서 30분 단위로 시간
-                  쪼개서 일정 관리하다가 얼마 전에 번아웃 왔거든요 😅 시간을 아낀다고 오히려 삶을 놓치고 있었던 것
-                  같아서 마음이 찡했습니다. 글쓴이님 글 덕분에 오늘은 퇴근하고 동네 한 바퀴 돌아야겠어요~
+                  와... 크론이라는 닉네임의 의미를 읽고 푸지 이발사가 딱
+                  떠올랐어요. 저도 회사에서 30분 단위로 시간 쪼개서 일정
+                  관리하다가 얼마 전에 번아웃 왔거든요 😅 시간을 아낀다고 오히려
+                  삶을 놓치고 있었던 것 같아서 마음이 찡했습니다. 글쓴이님 글
+                  덕분에 오늘은 퇴근하고 동네 한 바퀴 돌아야겠어요~
                 </div>
               </div>
             </li>
             <li>
               <div class="comment-item">
                 <div class="comment-author">
-                  <img src="./images/comment-author-icon.png" alt="사용자 프로필 이미지" />
+                  <img
+                    src="./images/comment-author-icon.png"
+                    class="comment-author-profile"
+                    alt="사용자 프로필 이미지"
+                  />
                   <span>방문자</span>
                 </div>
                 <div class="comment-content">
-                  이 글 읽으면서 계속 고개를 끄덕였네요 👍 특히 자기계발서 이야기... 저도 요즘 '갓생살기' 영상 보면서
-                  조급해졌었는데, 모모 다시 읽어봐야겠어요! 시간은 아끼는 게 아니라 느끼는 거라는 말에 완전 공감입니다.
-                  저도 이제는 하루에 한 번은 커피 마시면서 창밖 구경하기로 했어요 ☕️
+                  이 글 읽으면서 계속 고개를 끄덕였네요 👍 특히 자기계발서
+                  이야기... 저도 요즘 '갓생살기' 영상 보면서 조급해졌었는데,
+                  모모 다시 읽어봐야겠어요! 시간은 아끼는 게 아니라 느끼는
+                  거라는 말에 완전 공감입니다. 저도 이제는 하루에 한 번은 커피
+                  마시면서 창밖 구경하기로 했어요 ☕️
                 </div>
               </div>
             </li>
@@ -104,29 +161,53 @@
         </section>
 
         <footer>
-          <img src="./images/footer-logo.png" width="180" alt="우아한테크코스 로고" />
+          <img
+            src="./images/footer-logo.png"
+            class="footer-image"
+            alt="우아한테크코스 로고"
+          />
           <p>&copy; 우아한테크코스 All Rights reserved.</p>
         </footer>
       </main>
       <aside class="right-sidebar">
         <div class="profile-image">크론 프로필 이미지</div>
         <nav>
-          <h2>Contents</h2>
-          <ol class="contents">
+          <h2 class="navigator-title">------ Contents ------</h2>
+          <ul class="contents">
             <li>
-              <a href="#">자기소개</a>
+              <a href="#introduction">
+                <div class="navigator">자기소개</div>
+              </a>
             </li>
             <li>
-              <a href="#">나만의 갤러리</a>
+              <a href="#gallery">
+                <div class="navigator">갤러리</div>
+              </a>
             </li>
             <li>
-              <a href="#">나를 울린 인생 작품</a>
+              <a href="#recommendation">
+                <div class="navigator">추천 작품</div>
+              </a>
             </li>
             <li>
-              <a href="#">감상평</a>
+              <a href="#comment">
+                <div class="navigator">댓글</div>
+              </a>
             </li>
-          </ol>
+          </ul>
         </nav>
+
+        <div class="sns">
+          <a href="https://www.instagram.com/b1ue_0y0/">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+              class="icon"
+            />
+          </a>
+          <a href="https://github.com/hanheel">
+            <img src="./images/github-mark.png" class="icon" />
+          </a>
+        </div>
       </aside>
     </div>
   </body>
