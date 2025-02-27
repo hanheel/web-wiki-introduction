@@ -148,6 +148,8 @@ button {
 aside.right-sidebar nav {
   padding: var(--right-sidebar-padding);
   border-radius: 1rem;
+  position: sticky;
+  top: 0;
 }
 
 ul.contents {
@@ -227,6 +229,8 @@ footer p {
   gap: 1.5rem;
   justify-content: center;
   width: 100%;
+  position: sticky;
+  top: 350px;
 }
 .icon {
   width: 30px;
